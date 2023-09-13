@@ -46,12 +46,12 @@ The scripts are first used to train different models.
 Training parameters are defined in the code.
 
 - train
-    python single_landmark.py train
-    python multi_landmark.py train
+    - python single_landmark.py train
+    - python multi_landmark.py train
 
 - test
-    python single_landmark.py test
-    python multi_landmark.py test
+    - python single_landmark.py test
+    - python multi_landmark.py test
 
 
 ## Citation

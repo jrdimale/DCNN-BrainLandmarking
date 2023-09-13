@@ -2,7 +2,7 @@
 # N models should be trained, one for each landmark.
 # A PyTorch implementation of a neural network for automatic landmark detection.
 # The model is trained on a set of images and their corresponding landmark.
-# Author: Jordi Male
+# Author: Jordi Male (jordi.male@salle.url.edu)
 
 import torch
 import torch.nn as nn

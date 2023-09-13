@@ -1,8 +1,8 @@
 # CODE TO TRAIN A MODEL FOR MULTIPLE LANDMARKS
 # A PyTorch implementation of a neural network for automatic landmark detection.
 # The model is trained on a set of images and their corresponding landmarks.
-# Author: Jordi Male
-
+# Author: Jordi Male (jordi.male@salle.url.edu)
+        
 import torch
 import torch.nn as nn
 import cv2
@@ -65,6 +65,8 @@ END_Y = 200
 
 # TODO Change accordingly to the GPU being used
 device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+
+print(device)
 
 # Define if training is resumed from a checkpoint
 RESUME_CHECKPOINT = False
@@ -244,7 +246,7 @@ def train_model():
     Train the multi landmark model.
     """
 
-    training_images, training_landmarks = load_data()
+    training_images, training_landmarks = load_data(TRAIN_IMAGES_LIST, TRAIN_IMAGE_DIRECTORY, TRAIN_LANDMARKS_DIRECTORY)
 
     # Split the data into training and validation sets
     x_train, x_val, y_train, y_val = train_test_split(training_images, training_landmarks, test_size=TEST_SIZE)

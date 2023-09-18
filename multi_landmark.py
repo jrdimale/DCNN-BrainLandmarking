@@ -66,8 +66,6 @@ END_Y = 200
 # TODO Change accordingly to the GPU being used
 device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
 
-print(device)
-
 # Define if training is resumed from a checkpoint
 RESUME_CHECKPOINT = False
 
